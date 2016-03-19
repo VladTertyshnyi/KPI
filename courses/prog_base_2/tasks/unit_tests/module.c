@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-//INCAPSUALTION
+//ENCAPSUALTED
 struct city_s{
     char* name;
     int x;
@@ -16,7 +16,7 @@ struct cityList_s{
     int listCapacity;
 };
 //CONSTRUCTOR OF CITY_T
-city_t * new_city(char * name, int x, int y){
+city_t * Module_new_city(char * name, int x, int y){
     city_t * selfcity = malloc(sizeof(struct city_s));
     selfcity->name = name;
     selfcity->x = x;
@@ -25,7 +25,7 @@ city_t * new_city(char * name, int x, int y){
 }
 
 //CONSTRUCTOR
-cityList_t * create_list(int capacity){
+cityList_t * Module_create_list(int capacity){
     cityList_t * selfList = malloc(sizeof(cityList_t));
     selfList->list = malloc(sizeof(city_t) * capacity);
     selfList->listSize = 0;
@@ -33,12 +33,12 @@ cityList_t * create_list(int capacity){
     return selfList;
 }
 //DESTRUCTOR
-void delete_list(cityList_t * selfList){
+void Module_delete_list(cityList_t * selfList){
     free(selfList->list);
     free(selfList);
 }
 // GETS A POINTER TO THE CITY_T AND COPYING IT TO THE LIST
-void set_city(cityList_t * selfList, int index, city_t * selfCity){
+void Module_set_city(cityList_t * selfList, int index, city_t * selfCity){
     if(0 <= index && index <= selfList->listSize && index <= selfList->listCapacity){ //SETTING CITY TO THE INDEX WICH ALLREADY HAVE CITY WILL REWRITE IT WITH NEW CITY
         selfList->list[index] = *selfCity;
         selfList->listSize++;
@@ -47,10 +47,11 @@ void set_city(cityList_t * selfList, int index, city_t * selfCity){
     }
 }
 
-void delete_city(cityList_t * selfList, int index){
+void Module_delete_city(cityList_t * selfList, int index){
+    char* empty_name = "empty_city";
     if(0 >= index && index < selfList->listSize){
         int i;
-        for(i = selfList->listSize - 1; i > index; i--)
+        for(i = selfList->listSize - 1; i < index; i--)
             selfList->list[i - 1] = selfList->list[i];
         selfList->listSize--;
     }else{
@@ -58,15 +59,11 @@ void delete_city(cityList_t * selfList, int index){
     }
 }
 
-int get_listSize(cityList_t * selfList){
+int Module_get_listSize(cityList_t * selfList){
     return selfList->listSize;
 }
 
-int get_listCapacity(cityList_t * selfList){
-    return selfList->listCapacity;
-}
-
-double get_distance(cityList_t * selfList, int index1, int index2){
+double Module_get_distance(cityList_t * selfList, int index1, int index2){
         if(index1<selfList->listSize && index2<selfList->listSize
            && index1 >= 0 && index2 >= 0)
         return sqrt(pow(selfList->list[index2].x - selfList->list[index1].x, 2) +
