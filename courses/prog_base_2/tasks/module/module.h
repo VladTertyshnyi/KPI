@@ -4,18 +4,18 @@ typedef struct city_s city_t;
 
 typedef struct cityList_s cityList_t;
 
-city_t * new_city(char * name, int x, int y);
+city_t * Module_new_city(char * name, int x, int y);
 
-cityList_t * create_list(int capacity);
+cityList_t * Module_create_list(int capacity);
 
-void delete_list(cityList_t * selfList);
+void Module_delete_list(cityList_t * selfList);
 
-void set_city(cityList_t * selfList, int index, city_t * selfCity);
+void Module_set_city(cityList_t * selfList, int index, city_t * selfCity);
 
-void delete_city(cityList_t * selfList, int index);
+void Module_delete_city(cityList_t * selfList, int index);
 
-int get_listSize(cityList_t * selfList);
+int Module_get_listSize(cityList_t * selfList);
 
-double get_distance(cityList_t * selfList, int index1, int index2);
+double Module_get_distance(cityList_t * selfList, int index1, int index2);
 
 
