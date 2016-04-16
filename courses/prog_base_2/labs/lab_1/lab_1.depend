@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1460788839 source:c:\users\vlad\documents\study\op\lab_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"core.h"
+	"post.h"
+
+1460788782 source:c:\users\vlad\documents\study\op\lab_1\ñore.c
+	"core.h"
+	<windows.h>
+
+1460789687 source:c:\users\vlad\documents\study\op\lab_1\post.c
+	"core.h"
+	"post.h"
+	<string.h>
+
+1460788812 c:\users\vlad\documents\study\op\lab_1\post.h
+	<stdio.h>
+	<stdlib.h>
+
+1460788782 c:\users\vlad\documents\study\op\lab_1\core.h
+	"post.h"
+
+1460789188 source:c:\users\vlad\documents\study\op\lab_1\core_tests.c
+	"core.h"
+	"post.h"
+	<stdarg.h>
+	<stddef.h>
+	<setjmp.h>
+	<cmocka.h>
+	<cmocka_pbc.h>
+
+1460789519 source:c:\users\vlad\documents\study\op\lab_1\post_tests.c
+	"core.h"
+	"post.h"
+	<stdarg.h>
+	<stddef.h>
+	<setjmp.h>
+	<cmocka.h>
+	<cmocka_pbc.h>
+
