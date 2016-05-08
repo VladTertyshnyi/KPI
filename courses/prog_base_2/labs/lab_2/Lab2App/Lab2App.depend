@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1462298669 source:c:\users\vlad\documents\study\lab_2\lab2app\main.c
+	<stdio.h>
+	<stdlib.h>
+	"forDll.h"
+
+1462030977 c:\users\vlad\documents\study\lab_2\lab2app\queue.h
+
+1462017072 source:c:\users\vlad\documents\study\lab_2\lab2app\queue.c
+	"queue.h"
+	<stddef.h>
+
+1462025245 source:c:\users\vlad\documents\study\lab_2\lab2app\fordll.c
+	"forDll.h"
+
+1462030878 c:\users\vlad\documents\study\lab_2\lab2app\fordll.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	<time.h>
+	"queue.h"
+
