@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1463828067 source:c:\users\vlad\desktop\ œ_51_ –_1\kp_51_kr_1_tertyshnyi\main.c
+	<stdio.h>
+	<stdlib.h>
+	"chat.h"
+	"list.h"
+
+1463826503 c:\users\vlad\desktop\ œ_51_ –_1\chat\chat.h
+
+1463821084 c:\users\vlad\desktop\ œ_51_ –_1\listlib\list.h
+
