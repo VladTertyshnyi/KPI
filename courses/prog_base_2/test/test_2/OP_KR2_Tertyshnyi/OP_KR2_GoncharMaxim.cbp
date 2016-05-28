@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="OP_KR2_TertyshnyiVlad" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/OP_KR2_GoncharMaxim" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option='&quot;-std=c11&quot;' />
+					<Add directory="../../../../libsXML/libxml2-2.7.8.win32/libxml2-2.7.8.win32/include" />
+					<Add directory="../../../../libsXML/iconv-1.9.2.win32/iconv-1.9.2.win32/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lws2_32" />
+					<Add option="-llibxml2" />
+					<Add library="src/libs/libsqlite3.a" />
+					<Add library="src/libs/libDLList.a" />
+					<Add directory="../../../../libsXML/libxml2-2.7.8.win32/libxml2-2.7.8.win32/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="src/code/FSHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/code/dbModule.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/code/director.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/code/http.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/code/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/code/socket_win.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/code/xmlModule.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/headers/FSHelper.h" />
+		<Unit filename="src/headers/dbModule.h" />
+		<Unit filename="src/headers/director.h" />
+		<Unit filename="src/headers/http.h" />
+		<Unit filename="src/headers/list.h" />
+		<Unit filename="src/headers/socket.h" />
+		<Unit filename="src/headers/sqlite3.h" />
+		<Unit filename="src/headers/xmlModule.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

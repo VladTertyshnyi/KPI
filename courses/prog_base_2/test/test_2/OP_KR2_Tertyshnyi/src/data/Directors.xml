@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<directors>
+    <director Name="NameFromXML" Surname="SurnameFromXML">
+        <Id>10</Id>
+        <Investments>5000</Investments>
+        <Years>5.5</Years>
+        <Birthdate>1998-07-08</Birthdate>
+    </director>
+    
+
+
+</directors>
