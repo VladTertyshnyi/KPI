@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1464656201 source:c:\users\vlad\documents\study\op\lab_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"SupaDive.h"
+	"list.h"
+
+1464659194 c:\users\vlad\documents\study\op\lab_3\supadive.h
+	"list.h"
+
+1464658918 source:c:\users\vlad\documents\study\op\lab_3\supadive.c
+	"SupaDive.h"
+	"list.h"
+	<stdlib.h>
+	<stdio.h>
+	<strings.h>
+	<time.h>
+
+1463821084 c:\users\vlad\documents\study\op\lab_3\list.h
+
