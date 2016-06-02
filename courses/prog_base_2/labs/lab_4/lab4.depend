@@ -1,0 +1,97 @@
+# depslib dependency file v1.0
+1458404680 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\cjson.c
+	<string.h>
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<float.h>
+	<limits.h>
+	<ctype.h>
+	"cJSON.h"
+
+1464726227 c:\files\institute\2 семестр\Основи програмування\labs\lab4\cjson.h
+	<stdlib.h>
+
+1464726553 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cJSON.h"
+	"teacher.h"
+
+1464725900 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\teacher.c
+	"teacher.h"
+
+1464725900 c:\files\institute\2 семестр\Основи програмування\labs\lab4\teacher.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"list.h"
+
+1464716524 c:\files\institute\2 семестр\Основи програмування\labs\lab4\list.h
+
+1464725973 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\parse.c
+	"cJSON.h"
+	"parse.h"
+
+1464726031 c:\files\institute\2 семестр\Основи програмування\labs\lab4\parse.h
+	"teacher.h"
+
+1458404680 source:c:\users\vlad\documents\study\op\lab4\cjson.c
+	<string.h>
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<float.h>
+	<limits.h>
+	<ctype.h>
+	"cJSON.h"
+
+1464729827 c:\users\vlad\documents\study\op\lab4\cjson.h
+	<stdlib.h>
+
+1464910113 source:c:\users\vlad\documents\study\op\lab4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"socket.h"
+	"teacher.h"
+	"server.h"
+
+1464731822 c:\users\vlad\documents\study\op\lab4\teacher.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"list.h"
+	"socket.h"
+
+1464720124 c:\users\vlad\documents\study\op\lab4\list.h
+
+1464729500 source:c:\users\vlad\documents\study\op\lab4\teacher.c
+	"teacher.h"
+
+1464729573 source:c:\users\vlad\documents\study\op\lab4\parse.c
+	"cJSON.h"
+	"parse.h"
+
+1464729631 c:\users\vlad\documents\study\op\lab4\parse.h
+	"teacher.h"
+
+1464407884 c:\users\vlad\documents\study\op\lab4\socket.h
+
+1464407884 source:c:\users\vlad\documents\study\op\lab4\socket_win.c
+	<winsock2.h>
+	"socket.h"
+
+1464909574 c:\users\vlad\documents\study\op\lab4\server.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<ctype.h>
+	"socket.h"
+	"teacher.h"
+	"cJSON.h"
+
+1464897987 source:c:\users\vlad\documents\study\op\lab4\server.c
+	"server.h"
+

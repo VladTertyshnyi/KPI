@@ -122,7 +122,8 @@ void  update()
   {
    dx=cos(angle*DEGTORAD)*6;
    dy=sin(angle*DEGTORAD)*6;
-  // angle+=rand()%6-3;
+   //angle+=rand()%6-2.5;
+    //angle+=rand()%6-6;
    x+=dx;
    y+=dy;
 
@@ -272,7 +273,7 @@ int main()
        if ( isCollide(a,b) )
            {
             b->life=false;
-
+                //p->life=false;
             Entity *e = new Entity();
             e->settings(sExplosion_ship,a->x,a->y);
             e->name="explosion";
@@ -292,7 +293,7 @@ int main()
      if (e->name=="explosion")
       if (e->anim.isEnd()) e->life=0;
 
-    if (rand()%150==0)
+    if (rand()%200==0)
      {
        asteroid *a = new asteroid();
        a->settings(sRock, 0,rand()%H, rand()%360, 25);

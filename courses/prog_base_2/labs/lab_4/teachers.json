@@ -1,0 +1,26 @@
+[
+    {
+        "name" : "Taras Ivanov",
+	"birthdate" : "1992-03-09",
+	"salary" : 9100,
+	"rate" : 7.3,
+	"subjects" : 2
+    },
+
+    {
+        "name" : "Vlad Sorochynskyi",
+	"birthdate" : "1998-06-30",
+	"salary" : 10700,
+	"rate" : 8.7,
+	"subjects" : 4
+
+    },
+
+    {
+        "name" : "Vlad Tertyshnyi",
+	"birthdate" : "1998-02-05",
+	"salary" : 10500,
+	"rate" : 8.5,
+	"subjects" : 5
+    }
+]

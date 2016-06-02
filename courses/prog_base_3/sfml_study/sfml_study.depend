@@ -398,3 +398,21 @@
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 
+1462713497 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\sfml_study\main.cpp
+	"Game.hpp"
+
+1462713184 c:\users\vlad\desktop\kpi\courses\prog_base_3\sfml_study\game.hpp
+	"Window.hpp"
+	<string>
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+
+1462713184 c:\users\vlad\desktop\kpi\courses\prog_base_3\sfml_study\window.hpp
+	<string>
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+
+1462711006 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\sfml_study\window.cpp
+	"Window.hpp"
+	<SFML/Graphics.hpp>
+
