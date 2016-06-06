@@ -383,9 +383,11 @@
 1462985598 source:c:\users\vlad\documents\study\sfml\sfml_test\main.cpp
 	<SFML/Graphics.hpp>
 
-1465250541 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
+1465254188 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
 	<SFML/Graphics.hpp>
 	<time.h>
+	<list>
+	"Animation.h"
 	"Entity.h"
 
 1465247798 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\animation.cpp
@@ -411,4 +413,15 @@
 	<string>
 	<SFML/Graphics.hpp>
 	"Animation.h"
+
+1465253555 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\animation.cpp
+	"Animation.h"
+
+1465253555 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\animation.h
+	<SFML/Graphics.hpp>
+	<list>
+
+1465254188 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\entity.h
+	"Animation.h"
+	<SFML/Graphics.hpp>
 
