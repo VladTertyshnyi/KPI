@@ -3,6 +3,9 @@
 #include "Animation.h"
 #include <SFML/Graphics.hpp>
 
+const int W = 1200;
+const int H = 700;
+
 using namespace sf;
 
 class Entity
