@@ -2,9 +2,12 @@
 #define ENTITY_H
 #include "Animation.h"
 #include <SFML/Graphics.hpp>
+#define DEGTORAD 0.017453
 
 const int W = 1200;
 const int H = 700;
+
+
 
 using namespace sf;
 

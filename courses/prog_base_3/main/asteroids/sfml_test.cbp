@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics-d" />
@@ -30,7 +31,13 @@
 		<Linker>
 			<Add directory="D:/SFML-2.3.2/lib" />
 		</Linker>
+		<Unit filename="include/Animation.h" />
+		<Unit filename="include/Entity.h" />
+		<Unit filename="include/asteroid.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Animation.cpp" />
+		<Unit filename="src/Entity.cpp" />
+		<Unit filename="src/asteroid.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

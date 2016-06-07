@@ -4,39 +4,10 @@
 #include "Animation.h"
 #include "Entity.h"
 #include "asteroid.h"
+#include "bullet.h"
 
 using namespace sf;
 
-
-float DEGTORAD = 0.017453f;
-
-
-
-
-
-class bullet: public Entity
-{
-public:
-  int speed;
-  bullet()
-  {
-    name="bullet";
-    speed = 10;
-  }
-
-void  update()
-  {
-   dx=cos(angle*DEGTORAD)*speed;
-   dy=sin(angle*DEGTORAD)*speed;
-   angle+=rand()%6-2.5;
-    //angle+=rand()%6-6;
-   x+=dx;
-   y+=dy;
-
-   if (x>W || x<0 || y>H || y<0) life=0;     //DESTROING THE BULLET IF IT LEAVES THE SCREEN
-  }
-
-};
 
 
 class player: public Entity
