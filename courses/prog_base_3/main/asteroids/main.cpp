@@ -5,44 +5,10 @@
 #include "Entity.h"
 #include "asteroid.h"
 #include "bullet.h"
+#include "player.h"
 
 using namespace sf;
 
-
-
-class player: public Entity
-{
-public:
-   bool thrust;
-
-   player()
-   {
-     name="player";
-   }
-
-   void update()
-   {
-     if (thrust)
-      { dx+=cos(angle*DEGTORAD)*0.2;
-        dy+=sin(angle*DEGTORAD)*0.2; }
-     else
-      { dx*=0.95;
-        dy*=0.95; }
-
-    int maxSpeed=20;
-    float speed = sqrt(dx*dx+dy*dy);
-    if (speed>maxSpeed)
-     { dx *= maxSpeed/speed;
-       dy *= maxSpeed/speed; }
-
-    x+=dx;
-    y+=dy;
-
-    if (x>W) x=0; if (x<0) x=W;
-    if (y>H) y=0; if (y<0) y=H;
-   }
-
-};
 
 
 bool isCollide(Entity *a,Entity *b)      //CHECK COLLISION BETWEEN TWO CIRCLES
