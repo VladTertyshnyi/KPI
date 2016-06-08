@@ -86,16 +86,34 @@ int main()
             if (event.type == Event::KeyPressed)
              if (event.key.code == Keyboard::Space)
               {
-                //bullet *b1 = new bullet();
-                //bullet *b2 = new bullet();
-                bullet *b3 = new bullet();
-                //b1->settings(sBullet,p->x,p->y,p->angle-15,10);
-               // b2->settings(sBullet,p->x,p->y,p->angle+15,10);
-                b3->settings(sBullet,p->x,p->y,p->angle,10);
-                //entities.push_back(b2);
-                //entities.push_back(b1);                         // TO DO: CHECK FOR POWER UP STATUS
-                entities.push_back(b3);                         // IF YES - FIRE WITH 3 BULLETS INSTEAD OF ONE
-                                                                // NOW FIRES WITH 3 BULLETS FOR DEFAULT
+                  if(p->getPowerUpStatus()== 0){
+                        bullet *b0 = new bullet();
+                        b0->settings(sBullet,p->x,p->y,p->angle,10);
+                        entities.push_back(b0);
+                  }
+                  else if(p->getPowerUpStatus()== 1){
+                        bullet *b1 = new bullet();
+                        b1->settings(sBullet,p->x,p->y,p->angle - 10,10);
+                        entities.push_back(b1);
+                        bullet *b2 = new bullet();
+                        b2->settings(sBullet,p->x,p->y,p->angle + 10,10);
+                        entities.push_back(b2);
+                  }
+                   else if(p->getPowerUpStatus()== 2){
+                        bullet *b3 = new bullet();
+                        b3->settings(sBullet,p->x,p->y,p->angle - 15,10);
+                        entities.push_back(b3);
+                        bullet *b4 = new bullet();
+                        b4->settings(sBullet,p->x,p->y,p->angle + 15,10);
+                        entities.push_back(b4);
+                        bullet *b5 = new bullet();
+                        b5->settings(sBullet,p->x,p->y,p->angle ,10);
+                        entities.push_back(b5);
+                   } else{
+                        bullet *b6 = new bullet();
+                        b6->settings(sBullet,p->x,p->y,p->angle,10);
+                        entities.push_back(b6);
+                   }
               }
         }
 
@@ -154,6 +172,7 @@ int main()
        if ( isCollide(a,b) )
            {
             b->life=false;
+            reinterpret_cast<player*>(a)->addBullets();
             //p->life=false;
            }
     }

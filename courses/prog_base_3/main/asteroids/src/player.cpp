@@ -3,6 +3,7 @@
 player::player()
 {
    name="player";
+   PowerUpStatus = 0;
 }
 
 void player::update()
@@ -25,4 +26,14 @@ void player::update()
 
     if (x>W) x=0; if (x<0) x=W;
     if (y>H) y=0; if (y<0) y=H;
+}
+
+void player::addBullets(){
+    if(PowerUpStatus < 2){
+        PowerUpStatus++;
+    }
+}
+
+int player::getPowerUpStatus(){
+    return PowerUpStatus;
 }

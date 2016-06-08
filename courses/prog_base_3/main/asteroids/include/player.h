@@ -7,9 +7,12 @@
 class player : public Entity
 {
     public:
+        int PowerUpStatus;
         player();
         bool thrust;
         void update();
+        void addBullets();
+        int getPowerUpStatus();
 
     protected:
 
