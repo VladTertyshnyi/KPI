@@ -383,13 +383,16 @@
 1462985598 source:c:\users\vlad\documents\study\sfml\sfml_test\main.cpp
 	<SFML/Graphics.hpp>
 
-1465343723 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
+1465347564 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
 	<SFML/Graphics.hpp>
 	<time.h>
 	<list>
 	"Animation.h"
 	"Entity.h"
 	"asteroid.h"
+	"bullet.h"
+	"player.h"
+	"powerup.h"
 
 1465247798 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\animation.cpp
 	"Animation.h"
@@ -426,7 +429,7 @@
 	"Animation.h"
 	<SFML/Graphics.hpp>
 
-1465254385 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\entity.cpp
+1465346984 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\entity.cpp
 	"Entity.h"
 
 1465254809 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\asteroid.h
@@ -438,6 +441,18 @@
 1465344755 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\bullet.h
 	<Entity.h>
 
-1465344695 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\bullet.cpp
+1465347564 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\bullet.cpp
 	"bullet.h"
+
+1465345438 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\player.cpp
+	"player.h"
+
+1465345463 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\player.h
+	<Entity.h>
+
+1465347601 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\powerup.h
+	<Entity.h>
+
+1465346803 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\powerup.cpp
+	"powerup.h"
 

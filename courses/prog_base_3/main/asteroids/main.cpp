@@ -6,6 +6,7 @@
 #include "asteroid.h"
 #include "bullet.h"
 #include "player.h"
+#include "powerup.h"
 
 using namespace sf;
 
@@ -33,16 +34,17 @@ int main()
             FireBlue,
             FireRed,
             RockSmall,
-            ShipExplosion;
+            ShipExplosion,
+            BulletPowerup;
     ///////LOADING TEXTURES FROM FILES//////
     Spaceship.loadFromFile("images/spaceship.png");
     Background.loadFromFile("images/background.jpg");
     RockExplosion.loadFromFile("images/explosions/type_C.png");
     Rock.loadFromFile("images/rock.png");
     FireBlue.loadFromFile("images/fire_blue.png");
-    FireRed.loadFromFile("images/fire_red.png");
     RockSmall.loadFromFile("images/rock_small.png");
     ShipExplosion.loadFromFile("images/explosions/type_B.png");
+    BulletPowerup.loadFromFile("images/fire_red.png");
 
     Spaceship.setSmooth(true);
     Background.setSmooth(true);
@@ -56,6 +58,7 @@ int main()
     Animation sPlayer(Spaceship, 40,0,40,40, 1, 0);
     Animation sPlayer_go(Spaceship, 40,40,40,40, 1, 0);
     Animation sExplosion_ship(ShipExplosion, 0,0,192,192, 64, 0.5);
+    Animation sBulletPowerup(BulletPowerup, 0,0,32,64, 16, 0.8);
 
 
     std::list<Entity*> entities;
@@ -63,7 +66,7 @@ int main()
     for(int i=0;i<15;i++)
     {
       asteroid *aster = new asteroid();
-      aster->settings(sRock, rand()%W, rand()%H, rand()%360, 25);
+      aster->settings(sRock, rand()%W, rand()%H, rand()%260, 25);
       entities.push_back(aster);
     }
 
@@ -83,14 +86,14 @@ int main()
             if (event.type == Event::KeyPressed)
              if (event.key.code == Keyboard::Space)
               {
-                bullet *b1 = new bullet();
-                bullet *b2 = new bullet();
+                //bullet *b1 = new bullet();
+                //bullet *b2 = new bullet();
                 bullet *b3 = new bullet();
-                b1->settings(sBullet,p->x,p->y,p->angle-15,10);
-                b2->settings(sBullet,p->x,p->y,p->angle+15,10);
+                //b1->settings(sBullet,p->x,p->y,p->angle-15,10);
+               // b2->settings(sBullet,p->x,p->y,p->angle+15,10);
                 b3->settings(sBullet,p->x,p->y,p->angle,10);
-                entities.push_back(b2);
-                entities.push_back(b1);                         // TO DO: CHECK FOR POWER UP STATUS
+                //entities.push_back(b2);
+                //entities.push_back(b1);                         // TO DO: CHECK FOR POWER UP STATUS
                 entities.push_back(b3);                         // IF YES - FIRE WITH 3 BULLETS INSTEAD OF ONE
                                                                 // NOW FIRES WITH 3 BULLETS FOR DEFAULT
               }
@@ -117,6 +120,11 @@ int main()
             e->name="explosion";
             entities.push_back(e);
 
+            if(rand()%10 > 8){
+            powerup *pow = new powerup();
+            pow->settings(sBulletPowerup,a->x,a->y, p->angle, 10);
+            entities.push_back(pow);
+            }
 
             for(int i=0;i<2;i++)
             {
@@ -141,6 +149,13 @@ int main()
             p->settings(sPlayer,W/2,H/2,0,20);
             p->dx=0; p->dy=0;
            }
+
+       if (a->name=="player" && b->name=="powerup")
+       if ( isCollide(a,b) )
+           {
+            b->life=false;
+            //p->life=false;
+           }
     }
 
 
@@ -151,13 +166,13 @@ int main()
      if (e->name=="explosion")                               //EXPLOSIONS TO END
       if (e->anim.isEnd()) e->life=0;
 
-    if (rand()%200==0){                                      // RANDOMLY CREATING ASTEROIDS; 200 - IS AN ASTEROIDS FREQUENCY
+    if (rand()%200==0){                                      // RANDOMLY CREATE ASTEROIDS; 200 - IS AN ASTEROIDS FREQUENCY
        asteroid *a = new asteroid();
        a->settings(sRock, 0,rand()%H, rand()%360, 25);
        entities.push_back(a);
      }
 
-    for(auto i=entities.begin();i!=entities.end();)          //UPDATIND ALL ETNITIES IN THE GAME
+    for(auto i=entities.begin();i!=entities.end();)          //UPDATE ALL ETNITIES IN THE GAME
     {
       Entity *e = *i;
 

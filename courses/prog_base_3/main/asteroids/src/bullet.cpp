@@ -11,7 +11,7 @@ void  bullet::update()
    dx=cos(angle*DEGTORAD)*speed;
    dy=sin(angle*DEGTORAD)*speed;
    angle+=rand()%6-2.5;
-    //angle+=rand()%6-6;
+
    x+=dx;
    y+=dy;
 
