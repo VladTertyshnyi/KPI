@@ -1,5 +1,6 @@
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <time.h>
 #include <list>
 #include "Animation.h"
@@ -90,6 +91,11 @@ int main()
     gameClock.restart();
     int gameTime = 0;
     std::stringstream gameTimeString;
+
+    Music music;//создаем объект музыки
+    music.openFromFile("music.ogg");//загружаем файл
+    music.play();//воспроизводим музыку
+    music.setLoop(true);
     /////main loop/////
     while (app.isOpen())
     {
