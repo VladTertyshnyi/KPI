@@ -1,3 +1,4 @@
+
 #include <SFML/Graphics.hpp>
 #include <time.h>
 #include <list>
@@ -7,17 +8,20 @@
 #include "bullet.h"
 #include "player.h"
 #include "powerup.h"
-
+#include <iostream>
+#include <sstream>
+#include <stdio.h>
 using namespace sf;
 
 
-
-bool isCollide(Entity *a,Entity *b)      //CHECK COLLISION BETWEEN TWO CIRCLES
-{
+  bool isCollide(Entity *a,Entity *b)      //CHECK COLLISION BETWEEN TWO CIRCLES
+    {
   return (b->x - a->x)*(b->x - a->x)+
          (b->y - a->y)*(b->y - a->y)<
          (a->R + b->R)*(a->R + b->R);
 }
+
+
 
 
 int main()
@@ -70,13 +74,26 @@ int main()
       entities.push_back(aster);
     }
 
+
     player *p = new player();
     p->settings(sPlayer,H/2,W/2,0,20);
     entities.push_back(p);
 
+    Font font;
+	font.loadFromFile("font.ttf");
+	Text text("", font, 20);
+	text.setColor(Color::Blue);
+	text.setStyle(Text::Bold);
+    Text time("", font, 20);
+    time.setStyle(Text::Bold);
+    Clock gameClock;
+    gameClock.restart();
+    int gameTime = 0;
+    std::stringstream gameTimeString;
     /////main loop/////
     while (app.isOpen())
     {
+
         Event event;
         while (app.pollEvent(event))
         {
@@ -119,12 +136,11 @@ int main()
 
     if (Keyboard::isKeyPressed(Keyboard::Right)) p->angle+=5;
     if (Keyboard::isKeyPressed(Keyboard::Left))  p->angle-=5; // CREATE FIELD TURN SPEED
-    if (Keyboard::isKeyPressed(Keyboard::Up)) p->thrust=true; //TO DO: ADD POWERUPS THAT GIVE U BIGGER INERTION AND ANGLE SPEED
+    if (Keyboard::isKeyPressed(Keyboard::Up)) p->thrust=true; //TO DO: ADD POWERUPS THAT GIVE U BIGGER INERTION AND turn SPEED
     else p->thrust=false;
 
 
-
-    for(auto a:entities)                                      // CHECKING THE COLLISION BETWEEN ASTEROIDS AND BULLETS, PLAYER AND ASTEROIDS
+    for(auto a:entities)  // CHECKING THE COLLISION BETWEEN ASTEROIDS AND BULLETS, PLAYER AND ASTEROIDS, PLAYER AND POWERUPS
      for(auto b:entities)
     {
       if (a->name=="asteroid" && b->name=="bullet")
@@ -157,6 +173,7 @@ int main()
       if (a->name=="player" && b->name=="asteroid")
        if ( isCollide(a,b) )
            {
+            gameClock.restart();
             b->life=false;
             //p->life=false;
             Entity *e = new Entity();
@@ -202,15 +219,25 @@ int main()
       else i++;
     }
 
+////
 
-
-   //////draw ALL entities//////
-   app.draw(background);
+    gameTime = (int)gameClock.getElapsedTime().asSeconds();
+    gameTimeString.str(" ");
+    gameTimeString << gameTime;
+   // cout<<gameTimeString.str());
+    text.setString("Time:");
+    time.setString(gameTimeString.str());
+    time.setPosition(130, 40);
+    text.setPosition(40, 40);
+    app.draw(background);
+////
 
    for(auto i:entities)
      i->draw(app);
 
-   app.display();
+    app.draw(text);
+    app.draw(time);
+    app.display();
     }
 
     return 0;

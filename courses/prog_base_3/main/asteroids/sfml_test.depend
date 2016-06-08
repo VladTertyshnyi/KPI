@@ -1,6 +1,17 @@
 # depslib dependency file v1.0
-1460546649 source:c:\users\vlad\documents\study\sfml_test\main.cpp
+1465397999 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
+	"Game.h"
+
+1465397868 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\game.h
 	<SFML/Graphics.hpp>
+	<time.h>
+	<list>
+	"Animation.h"
+	"Entity.h"
+	"asteroid.h"
+	"bullet.h"
+	"player.h"
+	"powerup.h"
 
 1429784053 d:\sfml-2.3.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -380,48 +391,7 @@
 	<string>
 	<vector>
 
-1462985598 source:c:\users\vlad\documents\study\sfml\sfml_test\main.cpp
-	<SFML/Graphics.hpp>
-
-1465350414 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
-	<SFML/Graphics.hpp>
-	<time.h>
-	<list>
-	"Animation.h"
-	"Entity.h"
-	"asteroid.h"
-	"bullet.h"
-	"player.h"
-	"powerup.h"
-
-1465247798 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\animation.cpp
-	"Animation.h"
-
-1465248635 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\animation.h
-	<list>
-	<string>
-	<SFML/Graphics.hpp>
-
-1465248914 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\etnity.cpp
-	"Etnity.h"
-
-1465248274 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\etnity.h
-	<string>
-	<SFML/Graphics.hpp>
-	"Animation.h"
-
-1465252457 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\entity.cpp
-	"Entity.h"
-
-1465252436 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\entity.h
-	<string>
-	<SFML/Graphics.hpp>
-	"Animation.h"
-
-1465253555 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\animation.cpp
-	"Animation.h"
-
-1465253555 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\animation.h
+1465383160 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\animation.h
 	<SFML/Graphics.hpp>
 	<list>
 
@@ -429,23 +399,11 @@
 	"Animation.h"
 	<SFML/Graphics.hpp>
 
-1465347659 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\entity.cpp
-	"Entity.h"
-
 1465254809 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\asteroid.h
 	<Entity.h>
 
-1465254809 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\asteroid.cpp
-	"asteroid.h"
-
 1465344755 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\bullet.h
 	<Entity.h>
-
-1465347564 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\bullet.cpp
-	"bullet.h"
-
-1465348843 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\player.cpp
-	"player.h"
 
 1465348843 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\player.h
 	<Entity.h>
@@ -453,6 +411,24 @@
 1465347601 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\powerup.h
 	<Entity.h>
 
+1465383145 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\animation.cpp
+	"Animation.h"
+
+1465254809 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\asteroid.cpp
+	"asteroid.h"
+
+1465347564 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\bullet.cpp
+	"bullet.h"
+
+1465347659 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\entity.cpp
+	"Entity.h"
+
+1465350570 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\player.cpp
+	"player.h"
+
 1465347659 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\powerup.cpp
 	"powerup.h"
+
+1465397868 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\game.cpp
+	"Game.h"
 

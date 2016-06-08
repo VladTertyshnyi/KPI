@@ -34,10 +34,16 @@
 		<Unit filename="include/Animation.h" />
 		<Unit filename="include/Entity.h" />
 		<Unit filename="include/asteroid.h" />
+		<Unit filename="include/bullet.h" />
+		<Unit filename="include/player.h" />
+		<Unit filename="include/powerup.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Animation.cpp" />
 		<Unit filename="src/Entity.cpp" />
 		<Unit filename="src/asteroid.cpp" />
+		<Unit filename="src/bullet.cpp" />
+		<Unit filename="src/player.cpp" />
+		<Unit filename="src/powerup.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -15,7 +15,7 @@ class Animation
         Animation (Texture &t, int x, int y, int w, int h, int count, float Speed);
         void update();
         bool isEnd();
-
+        void Settings(Texture &t, int x, int y, int w, int h, int count, float Speed);
         virtual ~Animation();
 
     protected:
