@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1465410591 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
+1465425816 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
 	<SFML/Graphics.hpp>
 	<time.h>
 	<list>
@@ -434,7 +434,7 @@
 1465347659 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\entity.cpp
 	"Entity.h"
 
-1465412227 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\player.cpp
+1465426118 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\player.cpp
 	"player.h"
 
 1465411528 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\powerup.cpp

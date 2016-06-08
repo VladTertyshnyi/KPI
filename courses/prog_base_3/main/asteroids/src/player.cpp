@@ -18,6 +18,7 @@ void player::reset(){
     inertion = 0.99;
     maxSpeed=5;
     turnSpeed = 3;
+    angle = rand()%360;
 }
 
 void player::addStats(){

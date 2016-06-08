@@ -67,7 +67,7 @@ int main()
 
     std::list<Entity*> entities;
 
-    for(int i=0;i<15;i++)
+    for(int i=0;i<10;i++)
     {
       asteroid *aster = new asteroid();
       aster->settings(sRock, rand()%W, rand()%H, rand()%260, 25);
@@ -100,7 +100,7 @@ int main()
             if (event.type == Event::Closed)
                 app.close();
 
-            if (event.type == Event::KeyPressed)
+            if (event.type == Event::KeyReleased)
              if (event.key.code == Keyboard::Space)
               {
                   if(p->getPowerUpStatus()== 0){
@@ -191,7 +191,7 @@ int main()
             e->name="explosion";
             entities.push_back(e);
 
-            p->settings(sPlayer,W/2,H/2,0,20);
+            p->settings(sPlayer,W/2,H/2,rand()%360,20);
             p->dx=0; p->dy=0;
            }
 
@@ -219,7 +219,7 @@ int main()
      if (e->name=="explosion")                               //EXPLOSIONS TO END
       if (e->anim.isEnd()) e->life=0;
 
-    if (rand()%100 < p->asteroidFrequency){                                      // RANDOMLY CREATE ASTEROIDS; 1 - IS AN ASTEROIDS FREQUENCY
+    if (rand()%100 < p->asteroidFrequency){                     // RANDOMLY CREATE ASTEROIDS; 1 - IS AN ASTEROIDS FREQUENCY
        asteroid *a = new asteroid();
        a->settings(sRock, 0,rand()%H, rand()%360, 25);
        entities.push_back(a);
