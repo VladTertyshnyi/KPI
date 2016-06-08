@@ -96,6 +96,23 @@ int main()
     music.openFromFile("music.ogg");//загружаем файл
     music.play();//воспроизводим музыку
     music.setLoop(true);
+
+    SoundBuffer buffer;
+    buffer.loadFromFile("powerup.wav");
+    Sound powerupS;
+    powerupS.setBuffer(buffer);
+
+    SoundBuffer buffer1;
+    buffer1.loadFromFile("explode.wav");
+    Sound explodeS;
+    explodeS.setBuffer(buffer1);
+
+    SoundBuffer buffer2;
+    buffer2.loadFromFile("meteor.wav");
+    Sound meteorS;
+    meteorS.setBuffer(buffer2);
+
+
     /////main loop/////
     while (app.isOpen())
     {
@@ -160,6 +177,8 @@ int main()
             e->name="explosion";
             entities.push_back(e);
 
+            meteorS.play();
+
             if(rand()%100 > 95){
             powerup *pow = new powerup();
             pow->settings(sBulletPowerup,a->x,a->y, rand()%360, 15);
@@ -189,6 +208,7 @@ int main()
        if ( isCollide(a,b) )
            {
             gameClock.restart();
+            explodeS.play();
             reinterpret_cast<player*>(a)->reset();
             b->life=false;
             //p->life=false;
@@ -206,6 +226,7 @@ int main()
            {
             b->life=false;
             reinterpret_cast<player*>(a)->addBullets();
+            powerupS.play();
             //p->life=false;
            }
        if (a->name=="player" && b->name=="powerupStats")
@@ -213,6 +234,7 @@ int main()
            {
             b->life=false;
             reinterpret_cast<player*>(a)->addStats();
+            powerupS.play();
             //p->life=false;
            }
     }
