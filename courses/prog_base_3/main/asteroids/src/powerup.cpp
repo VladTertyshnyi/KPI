@@ -6,7 +6,6 @@ powerup::powerup()
     dy=rand()%4-2;
     speed = 1;
 
-    name="powerup";
 }
 
 void  powerup::update()

@@ -7,11 +7,20 @@
 class player : public Entity
 {
     public:
-        int PowerUpStatus;
         player();
+
+        int PowerUpStatus;
+        float asteroidFrequency;
+        float inertion;
+        int maxSpeed;
+        float turnSpeed;
         bool thrust;
+        int statStatus;
+
+        void reset();
         void update();
         void addBullets();
+        void addStats();
         int getPowerUpStatus();
 
     protected:

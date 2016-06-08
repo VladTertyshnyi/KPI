@@ -4,6 +4,32 @@ player::player()
 {
    name="player";
    PowerUpStatus = 0;
+   statStatus = 0;
+   asteroidFrequency = 1;
+   inertion = 0.99;
+   maxSpeed=5;
+   turnSpeed = 3;
+}
+
+void player::reset(){
+    statStatus = 0;
+    PowerUpStatus = 0;
+    asteroidFrequency = 0.75;
+    inertion = 0.99;
+    maxSpeed=5;
+    turnSpeed = 3;
+}
+
+void player::addStats(){
+    if(PowerUpStatus < 10){
+        statStatus++;
+        asteroidFrequency+=0.05;
+        inertion*=0.99;
+        maxSpeed+=2;
+        turnSpeed+=0.3;
+    }
+
+
 }
 
 void player::update()
@@ -12,10 +38,9 @@ void player::update()
       { dx+=cos(angle*DEGTORAD)*0.2;
         dy+=sin(angle*DEGTORAD)*0.2; }
      else
-      { dx*=0.95;
-        dy*=0.95; }
+      { dx*=inertion;           //INERTION
+        dy*=inertion; }
 
-    int maxSpeed=20;
     float speed = sqrt(dx*dx+dy*dy);
     if (speed>maxSpeed)
      { dx *= maxSpeed/speed;

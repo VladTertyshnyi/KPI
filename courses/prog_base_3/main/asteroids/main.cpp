@@ -134,8 +134,8 @@ int main()
               }
         }
 
-    if (Keyboard::isKeyPressed(Keyboard::Right)) p->angle+=5;
-    if (Keyboard::isKeyPressed(Keyboard::Left))  p->angle-=5; // CREATE FIELD TURN SPEED
+    if (Keyboard::isKeyPressed(Keyboard::Right)) p->angle+=p->turnSpeed;
+    if (Keyboard::isKeyPressed(Keyboard::Left))  p->angle-=p->turnSpeed; // CREATE FIELD TURN SPEED
     if (Keyboard::isKeyPressed(Keyboard::Up)) p->thrust=true; //TO DO: ADD POWERUPS THAT GIVE U BIGGER INERTION AND turn SPEED
     else p->thrust=false;
 
@@ -154,10 +154,19 @@ int main()
             e->name="explosion";
             entities.push_back(e);
 
-            if(rand()%10 > 8){
+            if(rand()%100 > 95){
             powerup *pow = new powerup();
-            pow->settings(sBulletPowerup,a->x,a->y, p->angle, 10);
+            pow->settings(sBulletPowerup,a->x,a->y, rand()%360, 15);
+            pow->name = "powerupBull";
             entities.push_back(pow);
+            }else{
+                if(rand()%100 > 95){
+                powerup *pow = new powerup();
+                pow->settings(sBulletPowerup,a->x,a->y, rand()%360, 15);
+                pow->anim.sprite.setColor(Color::Cyan);
+                pow->name = "powerupStats";
+                entities.push_back(pow);
+                }
             }
 
             for(int i=0;i<2;i++)
@@ -174,6 +183,7 @@ int main()
        if ( isCollide(a,b) )
            {
             gameClock.restart();
+            reinterpret_cast<player*>(a)->reset();
             b->life=false;
             //p->life=false;
             Entity *e = new Entity();
@@ -185,11 +195,18 @@ int main()
             p->dx=0; p->dy=0;
            }
 
-       if (a->name=="player" && b->name=="powerup")
+       if (a->name=="player" && b->name=="powerupBull")
        if ( isCollide(a,b) )
            {
             b->life=false;
             reinterpret_cast<player*>(a)->addBullets();
+            //p->life=false;
+           }
+       if (a->name=="player" && b->name=="powerupStats")
+       if ( isCollide(a,b) )
+           {
+            b->life=false;
+            reinterpret_cast<player*>(a)->addStats();
             //p->life=false;
            }
     }
@@ -202,7 +219,7 @@ int main()
      if (e->name=="explosion")                               //EXPLOSIONS TO END
       if (e->anim.isEnd()) e->life=0;
 
-    if (rand()%200==0){                                      // RANDOMLY CREATE ASTEROIDS; 200 - IS AN ASTEROIDS FREQUENCY
+    if (rand()%100 < p->asteroidFrequency){                                      // RANDOMLY CREATE ASTEROIDS; 1 - IS AN ASTEROIDS FREQUENCY
        asteroid *a = new asteroid();
        a->settings(sRock, 0,rand()%H, rand()%360, 25);
        entities.push_back(a);

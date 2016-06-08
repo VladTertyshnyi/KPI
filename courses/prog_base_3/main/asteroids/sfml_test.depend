@@ -1,6 +1,17 @@
 # depslib dependency file v1.0
-1465397999 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
-	"Game.h"
+1465410591 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\main.cpp
+	<SFML/Graphics.hpp>
+	<time.h>
+	<list>
+	"Animation.h"
+	"Entity.h"
+	"asteroid.h"
+	"bullet.h"
+	"player.h"
+	"powerup.h"
+	<iostream>
+	<sstream>
+	<stdio.h>
 
 1465397868 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\game.h
 	<SFML/Graphics.hpp>
@@ -405,7 +416,7 @@
 1465344755 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\bullet.h
 	<Entity.h>
 
-1465348843 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\player.h
+1465412227 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\player.h
 	<Entity.h>
 
 1465347601 c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\include\powerup.h
@@ -423,10 +434,10 @@
 1465347659 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\entity.cpp
 	"Entity.h"
 
-1465350570 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\player.cpp
+1465412227 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\player.cpp
 	"player.h"
 
-1465347659 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\powerup.cpp
+1465411528 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\powerup.cpp
 	"powerup.h"
 
 1465397868 source:c:\users\vlad\desktop\kpi\courses\prog_base_3\main\asteroids\src\game.cpp
