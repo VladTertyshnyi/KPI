@@ -19,6 +19,7 @@
 					<Add library="sfml-graphics-d" />
 					<Add library="sfml-window-d" />
 					<Add library="sfml-system-d" />
+					<Add library="sfml-audio-d" />
 				</Linker>
 			</Target>
 		</Build>
@@ -33,6 +34,8 @@
 		</Linker>
 		<Unit filename="include/Animation.h" />
 		<Unit filename="include/Entity.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/Window.h" />
 		<Unit filename="include/asteroid.h" />
 		<Unit filename="include/bullet.h" />
 		<Unit filename="include/player.h" />
@@ -40,6 +43,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Animation.cpp" />
 		<Unit filename="src/Entity.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Window.cpp" />
 		<Unit filename="src/asteroid.cpp" />
 		<Unit filename="src/bullet.cpp" />
 		<Unit filename="src/player.cpp" />

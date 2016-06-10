@@ -16,6 +16,7 @@ class Animation
         void update();
         bool isEnd();
         void Settings(Texture &t, int x, int y, int w, int h, int count, float Speed);
+        void setColor(sf::Color color);
         virtual ~Animation();
 
     protected:

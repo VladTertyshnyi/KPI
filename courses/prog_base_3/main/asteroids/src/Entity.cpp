@@ -15,17 +15,18 @@ void Entity::settings(Animation &a,int X,int Y,float Angle,int radius)
 
 void Entity::update(){};
 
-void Entity::draw(RenderWindow &app)
+void Entity::draw(RenderWindow *app)
 {
   anim.sprite.setPosition(x,y);
   anim.sprite.setRotation(angle+90);
-  app.draw(anim.sprite);
-
+  app->draw(anim.sprite);
+  /*
   CircleShape circle(R);
   circle.setFillColor(Color(255,0,0,170));
   circle.setPosition(x,y);
   circle.setOrigin(R,R);
-  //app.draw(circle);
+  app.draw(circle);
+  */
 }
 
 Entity::~Entity()

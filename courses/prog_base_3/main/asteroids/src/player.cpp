@@ -9,6 +9,8 @@ player::player()
    inertion = 0.99;
    maxSpeed=5;
    turnSpeed = 3;
+   hasLost = false;
+   acceleration = 0.2;
 }
 
 void player::reset(){
@@ -17,10 +19,15 @@ void player::reset(){
     asteroidFrequency = 0.75;
     inertion = 0.99;
     maxSpeed=5;
+    acceleration = 0.2;
     turnSpeed = 3;
     angle = rand()%360;
+    hasLost = false;
 }
 
+bool player::HasLost(){
+    return hasLost;
+}
 void player::addStats(){
     if(PowerUpStatus < 10){
         statStatus++;
@@ -28,6 +35,7 @@ void player::addStats(){
         inertion*=0.99;
         maxSpeed+=2;
         turnSpeed+=0.3;
+        acceleration += 0.01;
     }
 
 
@@ -36,8 +44,8 @@ void player::addStats(){
 void player::update()
 {
    if (thrust)
-      { dx+=cos(angle*DEGTORAD)*0.2;
-        dy+=sin(angle*DEGTORAD)*0.2; }
+      { dx+=cos(angle*DEGTORAD)*acceleration;
+        dy+=sin(angle*DEGTORAD)*acceleration; }
      else
       { dx*=inertion;           //INERTION
         dy*=inertion; }

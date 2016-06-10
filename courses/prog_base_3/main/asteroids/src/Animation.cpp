@@ -23,6 +23,10 @@ Animation::Animation (Texture &t, int x, int y, int w, int h, int count, float S
 		sprite.setOrigin(w/2,h/2);
         sprite.setTextureRect(frames[0]);
 	}
+
+void Animation::setColor(sf::Color color){
+    sprite.setColor(color);
+}
 void Animation::Settings (Texture &t, int x, int y, int w, int h, int count, float Speed)
 	{
 	    Frame = 0;

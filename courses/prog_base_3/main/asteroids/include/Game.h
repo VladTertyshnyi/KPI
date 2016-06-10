@@ -1,7 +1,9 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef GAME_H_INCLUDED
+#define GAME_H_INCLUDED
 
+#include "Window.h"
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <time.h>
 #include <list>
 #include "Animation.h"
@@ -10,40 +12,77 @@
 #include "bullet.h"
 #include "player.h"
 #include "powerup.h"
+#include <iostream>
+#include <sstream>
 
-using namespace sf;
+class Game{
+public:
+    Game();
+    ~Game();
 
-class Game
-{
-    public:
-        Game();
+    void HandleInput();
+    void Update();
+    void Render();
+    gameWindow * GetWindow();
+    Time GetElapsed();
+    void RestartClock();
 
-        Event event;
+    gameWindow window;
 
-        player * p;
+    player *p;
 
-        Animation sExplosion;
-        Animation sRock;
-        Animation sRock_small;
-        Animation sBullet;
-        Animation sPlayer;
-        Animation sPlayer_go;
-        Animation sExplosion_ship;
-        Animation sBulletPowerup;
+    std::list<Entity*> entities;
 
-        Sprite background;
+    //Font font;
+    Text text;
+    Text time;
+    Text notif;
 
-        std::list<Entity*> entities;
+    std::stringstream gameTimeString;
+    std::stringstream gameTimeStrBig;
 
-        void CheckColisions();
-        void Update();
+    int gameTime;
+    Clock gameClock;
 
-    protected:
+    Texture tSpaceship,
+            tBackground,
+            tRockExplosion,
+            tRock,
+            tFireBlue,
+            tFireRed,
+            tRockSmall,
+            tShipExplosion,
+            tBulletPowerup;
 
-    private:
-        void SetAnimations();
-        void InitialAster();
-        void CreatePlayer();
+    Sprite background;
+
+    Animation aExplosion,
+            aRock,
+            aRock_small,
+            aBullet,
+            aPlayer,
+            aPlayer_go,
+            aExplosion_ship,
+            aBulletPowerup;
+
+    Music music;
+
+    SoundBuffer buffer;
+    SoundBuffer buffer1;
+    SoundBuffer buffer2;
+
+    Sound powerupS;
+    Sound explodeS;
+    Sound meteorS;
+
+
+
+
+
+private:
+
 };
 
-#endif // GAME_H
+
+
+#endif // GAME_H_INCLUDED
