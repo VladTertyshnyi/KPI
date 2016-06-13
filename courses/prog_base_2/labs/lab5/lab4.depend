@@ -1,0 +1,296 @@
+# depslib dependency file v1.0
+1458404680 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\cjson.c
+	<string.h>
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<float.h>
+	<limits.h>
+	<ctype.h>
+	"cJSON.h"
+
+1464726227 c:\files\institute\2 семестр\Основи програмування\labs\lab4\cjson.h
+	<stdlib.h>
+
+1464906424 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cJSON.h"
+	"teacher.h"
+	"server.h"
+
+1464725900 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\teacher.c
+	"teacher.h"
+
+1464725900 c:\files\institute\2 семестр\Основи програмування\labs\lab4\teacher.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"list.h"
+
+1464716524 c:\files\institute\2 семестр\Основи програмування\labs\lab4\list.h
+
+1464725973 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\parse.c
+	"cJSON.h"
+	"parse.h"
+
+1464726031 c:\files\institute\2 семестр\Основи програмування\labs\lab4\parse.h
+	"teacher.h"
+
+1464414304 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\socket.c
+	<winsock2.h>
+	"socket.h"
+
+1464414254 c:\files\institute\2 семестр\Основи програмування\labs\lab4\socket.h
+
+1464906350 c:\files\institute\2 семестр\Основи програмування\labs\lab4\server.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<ctype.h>
+	<winsock2.h>
+	"socket.h"
+	"teacher.h"
+	"cJSON.h"
+
+1465033891 source:c:\files\institute\2 семестр\Основи програмування\labs\lab4\server.c
+	"server.h"
+
+1458404680 source:c:\files\institute\2 семестр\Основи програмування\labs\lab5\cjson.c
+	<string.h>
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<float.h>
+	<limits.h>
+	<ctype.h>
+	"cJSON.h"
+
+1464726227 c:\files\institute\2 семестр\Основи програмування\labs\lab5\cjson.h
+	<stdlib.h>
+
+1464414304 source:c:\files\institute\2 семестр\Основи програмування\labs\lab5\socket.c
+	<winsock2.h>
+	"socket.h"
+
+1464414254 c:\files\institute\2 семестр\Основи програмування\labs\lab5\socket.h
+
+1465218976 source:c:\files\institute\2 семестр\Основи програмування\labs\lab5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cJSON.h"
+	"teacher.h"
+	"server.h"
+
+1465157310 c:\files\institute\2 семестр\Основи програмування\labs\lab5\teacher.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"list.h"
+
+1464716524 c:\files\institute\2 семестр\Основи програмування\labs\lab5\list.h
+
+1465218976 c:\files\institute\2 семестр\Основи програмування\labs\lab5\server.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<ctype.h>
+	<winsock2.h>
+	"sqlite3.h"
+	"socket.h"
+	"teacher.h"
+	"cJSON.h"
+
+1465160085 source:c:\files\institute\2 семестр\Основи програмування\labs\lab5\parse.c
+	"cJSON.h"
+	"parse.h"
+
+1464726031 c:\files\institute\2 семестр\Основи програмування\labs\lab5\parse.h
+	"teacher.h"
+
+1465222411 source:c:\files\institute\2 семестр\Основи програмування\labs\lab5\server.c
+	"server.h"
+
+1465157310 source:c:\files\institute\2 семестр\Основи програмування\labs\lab5\teacher.c
+	"teacher.h"
+
+1465201657 source:c:\files\institute\2 семестр\Основи програмування\labs\lab5\database.c
+	"server.h"
+
+1450774966 c:\files\institute\2 семестр\Основи програмування\labs\lab5\sqlite3.h
+	<stdarg.h>
+
+1450774966 source:c:\files\institute\2 семестр\Основи програмування\labs\lab5\sqlite3.c
+	<vxWorks.h>
+	<pthread.h>
+	"mingw.h"
+	"_mingw.h"
+	<stdarg.h>
+	"config.h"
+	<stdint.h>
+	<inttypes.h>
+	<intrin.h>
+	<cmnintrin.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stddef.h>
+	<TargetConditionals.h>
+	<ctype.h>
+	<time.h>
+	<sys/sysctl.h>
+	<malloc/malloc.h>
+	<libkern/OSAtomic.h>
+	<malloc.h>
+	<pthread.h>
+	"windows.h"
+	<sys/cygwin.h>
+	<errno.h>
+	<process.h>
+	<math.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<sys/time.h>
+	<errno.h>
+	<sys/mman.h>
+	<sys/ioctl.h>
+	<sys/file.h>
+	<sys/param.h>
+	<semaphore.h>
+	<limits.h>
+	<sys/mount.h>
+	<utime.h>
+	<sys/dcmd_blk.h>
+	<sys/statvfs.h>
+	<dlfcn.h>
+	<tcl.h>
+	"sqlite3rtree.h"
+	<unicode/utypes.h>
+	<unicode/uregex.h>
+	<unicode/ustring.h>
+	<unicode/ucol.h>
+	<unicode/ubrk.h>
+	<unicode/utf16.h>
+	<ctype.h>
+	<math.h>
+
+1458404680 source:d:\lab5\cjson.c
+	<string.h>
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<float.h>
+	<limits.h>
+	<ctype.h>
+	"cJSON.h"
+
+1464729827 d:\lab5\cjson.h
+	<stdlib.h>
+
+1465828731 source:d:\lab5\database.c
+	"server.h"
+
+1465222576 d:\lab5\server.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<ctype.h>
+	<winsock2.h>
+	"sqlite3.h"
+	"socket.h"
+	"teacher.h"
+	"cJSON.h"
+
+1450774966 d:\lab5\sqlite3.h
+	<stdarg.h>
+
+1464417854 d:\lab5\socket.h
+
+1465160910 d:\lab5\teacher.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"list.h"
+
+1464720124 d:\lab5\list.h
+
+1465222576 source:d:\lab5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cJSON.h"
+	"teacher.h"
+	"server.h"
+
+1465226011 source:d:\lab5\server.c
+	"server.h"
+
+1464417904 source:d:\lab5\socket.c
+	<winsock2.h>
+	"socket.h"
+
+1450774966 source:d:\lab5\sqlite3.c
+	<vxWorks.h>
+	<pthread.h>
+	"mingw.h"
+	"_mingw.h"
+	<stdarg.h>
+	"config.h"
+	<stdint.h>
+	<inttypes.h>
+	<intrin.h>
+	<cmnintrin.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stddef.h>
+	<TargetConditionals.h>
+	<ctype.h>
+	<time.h>
+	<sys/sysctl.h>
+	<malloc/malloc.h>
+	<libkern/OSAtomic.h>
+	<malloc.h>
+	<pthread.h>
+	"windows.h"
+	<sys/cygwin.h>
+	<errno.h>
+	<process.h>
+	<math.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<sys/time.h>
+	<errno.h>
+	<sys/mman.h>
+	<sys/ioctl.h>
+	<sys/file.h>
+	<sys/param.h>
+	<semaphore.h>
+	<limits.h>
+	<sys/mount.h>
+	<utime.h>
+	<sys/dcmd_blk.h>
+	<sys/statvfs.h>
+	<dlfcn.h>
+	<tcl.h>
+	"sqlite3rtree.h"
+	<unicode/utypes.h>
+	<unicode/uregex.h>
+	<unicode/ustring.h>
+	<unicode/ucol.h>
+	<unicode/ubrk.h>
+	<unicode/utf16.h>
+	<ctype.h>
+	<math.h>
+
+1465160910 source:d:\lab5\teacher.c
+	"teacher.h"
+
