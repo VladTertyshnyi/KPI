@@ -83,9 +83,9 @@ class Table
                 }
             }
             if(index == -1)index = 0;
-            for(int i = maxSize-1; i > index; i--){
+            for(int i = maxSize-1; i >= index; i--){
                 members[i].name = members[i-1].name;
-                members[i].name = members[i-1].name;
+                members[i].time = members[i-1].time;
             }
             members[index].name = name;
             members[index].time = time;
@@ -98,6 +98,20 @@ class Table
 
     private:
 };
+
+void readFromFile(Table * table){
+    FILE * fin;
+    fin = fopen("data.txt", "rb");
+    fread(table->members, sizeof(table->members), 1, fin);
+    fclose(fin);
+}
+
+void writeToFile(Table * table){
+    FILE * fout;
+    fout = fopen("data.txt", "wb");
+    fwrite(table->members, sizeof(table->members), 1, fout);
+    fclose(fout);
+}
 
 using namespace sf;
 
@@ -162,6 +176,7 @@ int main()
     }
 
     Table table;
+    //readFromFile(&table);
     std::string userInput;
     sf::String sfUserInput;
 
@@ -210,14 +225,13 @@ int main()
     /////////////////////////////////MUSIC AND SOUNDS//////////////////////////////////
     Music music;
     music.openFromFile("music.ogg");
-    music.play();
+    //music.play();
     music.setLoop(true);
 
     SoundBuffer buffer;
     buffer.loadFromFile("powerup.wav");
     Sound powerupS;
     powerupS.setBuffer(buffer);
-
     SoundBuffer buffer1;
     buffer1.loadFromFile("explode.wav");
     Sound explodeS;
@@ -477,6 +491,7 @@ int main()
     }
 
     app.display();
+    //writeToFile(&table);
     }
 
     return 0;

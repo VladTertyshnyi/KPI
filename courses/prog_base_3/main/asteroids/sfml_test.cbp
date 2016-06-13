@@ -35,6 +35,7 @@
 		<Unit filename="include/Animation.h" />
 		<Unit filename="include/Entity.h" />
 		<Unit filename="include/Game.h" />
+		<Unit filename="include/Table.h" />
 		<Unit filename="include/Window.h" />
 		<Unit filename="include/asteroid.h" />
 		<Unit filename="include/bullet.h" />

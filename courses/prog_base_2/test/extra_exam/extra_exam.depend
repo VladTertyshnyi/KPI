@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1465820335 source:c:\users\vlad\desktop\extra_exam\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"train.h"
+
+1465812314 c:\users\vlad\desktop\extra_exam\function.h
+
+1465814036 source:c:\users\vlad\desktop\extra_exam\tests.c
+	<stdarg.h>
+	<stddef.h>
+	<setjmp.h>
+	<cmocka.h>
+	<cmocka_pbc.h>
+	<stdlib.h>
+
+1465814030 source:c:\users\vlad\desktop\extra_exam\function.c
+	<stdlib.h>
+
+1465818655 c:\users\vlad\desktop\extra_exam\staticlib\trainlib\train.h
+	<stdio.h>
+	<stdlib.h>
+
